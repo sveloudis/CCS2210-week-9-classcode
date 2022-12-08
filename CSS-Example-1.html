@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+.warning {
+        border-color: orange;
+        font-weight: bold;
+      }
+        
+      .note-box {
+        border: 4px solid;
+        border-color: #555;
+        padding: .5em;
+      }
+
+
+        
+
+      .danger {
+        border-color: red;
+        font-weight: bold;
+      }
+    </style>
+	</head>
+    
+  	
+	<body>
+		<div class="note-box">
+            This is an informational box.
+        </div>
+
+        <br>
+        
+        <!-- 
+             Note that the order in which class names are enumerated below is not significant. 
+             What is significant is the order in which the CSS rules are defined in the header.
+             Thus the div below has a .5em padding and a 4px thick border of orange colour. The 
+             padding and thickness are imposed by the note-box class, whereas the colour by the 
+             warning class. The warning class is defined after the note-box class and thus takes 
+             precedence. 
+        -->
+        <div class="note-box warning">
+            This is a warning box.
+        </div>
+    
+        <br>
+    
+        <div class="note-box danger">
+            This is a danger box.
+        </div>
+    
+        <br>
+    
+        <div class="danger">
+            This is not a note box...
+        </div>
+	</body>
+</html>
+
+

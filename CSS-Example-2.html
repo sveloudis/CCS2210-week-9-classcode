@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+    <style>
+        
+      /* The following code allows us to override the precedence imposed by the order in which CSS rules are defined */
+      
+      /* The following selector selects all elements that are associated with BOTH the note-box and the warning classes  */
+      /* Note that the name of the class below is warning (not note-box.warning) */
+      /* Note that the attribute values specified in the class below take precedence over the values specified by the class note-box 
+         for the same attributes (e.g., border-color). The values specified in the class note-box for attributes that do not appear in 
+         the class warning remain intact (e.g. 4px border) */
+      .note-box.warning {
+        border-color: orange;
+        font-weight: bold;
+      }
+
+      div:hover {
+        background-color: blue;
+      }
+        
+      .note-box {
+        border: 4px solid;
+        border-color: #555;
+        padding: .5em;
+      }
+    
+      .note-box.danger {
+        border-color: red;
+        font-weight: bold;
+      }
+
+      .box {color: red; font-weight: bold; font-style: normal;}
+      .box p {color: green;}
+    </style>
+	</head>
+    
+  	
+	<body>
+		<div class="note-box">
+            This is an informational box.
+        </div>
+
+        <br>
+        
+        <!-- Note that the order in which the class names are enumerated is not significant -->
+        <div class="warning note-box">
+            This is a warning box.
+        </div>
+    
+        <br>
+    
+        <div class="note-box danger">
+            This is a danger box.
+        </div>
+    
+        <br>
+    
+        <div><div class="box">
+          Hi!
+            <p>This is not a note box...</p>
+        </div></div>
+	</body>
+</html>
